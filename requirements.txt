@@ -1,0 +1,4 @@
+python-dotenv
+python-decouple
+django>5.0
+djangorestframework
