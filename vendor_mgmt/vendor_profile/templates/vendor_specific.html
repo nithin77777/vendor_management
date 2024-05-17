@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static '/bootstrap-5.3.3-dist/css/bootstrap.min.css' %}">
+    <script src="{% static '/bootstrap-5.3.3-dist/js/bootstrap.min.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Details</title>
+</head>
+<body>
+    {% for vendor in data %}
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md">
+            Name:   {{vendor.name}}
+        </div> 
+
+        <div class="col-md"> Contact:{{vendor.contact_details}}</div>
+        <div class="col-md"> Address:{{vendor.address}}</div>
+        <div class="col-md">Code:{{vendor.vendor_code}}   </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            
+        </div>
+    </div>
+    {% endfor %}
+
+</body>
+</html>

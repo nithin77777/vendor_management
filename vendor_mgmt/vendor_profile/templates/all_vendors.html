@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/bootstrap-5.3.3-dist/css/bootstrap.min.css' %}">
+    <script src="{% static '/bootstrap-5.3.3-dist/js/bootstrap.min.js' %}"></script>
+    <title>Vendors</title>
+</head>
+<body>
+    {% for i in data %}
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md">
+            Name:   {{i.name}}
+        </div> 
+
+        <div class="col-md"> Contact:    {{i.contact_details}}</div>
+        <div class="col-md"> Address:    {{i.address}}</div>
+        <div class="col-md">Code:   {{i.vendor_code}}   </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            
+        </div>
+    </div>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/bootstrap-5.3.3-dist/css/bootstrap.min.css' %}">
+    <script src="{% static '/bootstrap-5.3.3-dist/js/bootstrap.min.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+    Create Vendor
+    
+    {% block vendor_create %}
+    <form action="" method="post">{% csrf_token %}
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <input class="form-control" type="text" name="name" placeholder="Enter Vendor Name">
+                    <input class="form-control" type="number" name="contact_details" placeholder="Enter Contact Details">
+                    <input class="form-control" type="text" name="address" placeholder="Enter Address">
+                    <input class="form-control" type="text" name="vendor_code" placeholder="Enter Vendor Code">
+                </div>
+                <button class="btn btn-primary" type="submit">Create</button>
+            </div>
+        </div>
+    </form>
+    {% endblock %}
+
+    
+</body>
+</html>
