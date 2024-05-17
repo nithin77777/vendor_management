@@ -1,2 +1,3 @@
 venv/
 .djangoenv
+__pycache__
