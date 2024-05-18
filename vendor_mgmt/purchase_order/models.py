@@ -7,7 +7,7 @@ STATUS_CHOICES = [('pending','PENDING'),('completed','COMPLETED'),('canceled','C
 
 class PurchaseOrder(models.Model): 
 
-    po_number=models.CharField(verbose_name='Purchase Order Number',max_length=20,primary_key=True) 
+    po_number=models.CharField(verbose_name='Purchase Order Number',max_length=20,unique=True) 
     vendor=models.ForeignKey(VendorProfile,on_delete=models.CASCADE)
     order_date=models.DateTimeField()
     delivery_date=models.DateTimeField()
