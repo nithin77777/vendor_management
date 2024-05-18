@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static '/bootstrap-5.3.3-dist/css/bootstrap.min.css' %}">
+    <script src="{% static '/bootstrap-5.3.3-dist/js/bootstrap.min.js' %}"></script>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Orders</title>
+</head>
+<body>
+<h1 class="text-center">All Purchase Orders</h1>
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+               PO Number: <input type="number" name="po_number">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                Vendor: <input type="text" name="vendor">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+               Order Date: <input type="date" name="order_date"></div>
+        </div>
+        <div class="row">
+           Date of Delivery: <div class="col-md-8"><input type="date" name="delivery_date"></div>
+        </div>
+        <div class="row">
+           Items: <div class="col-md-8"><input type="text" name="items"></div>
+        </div>
+        <div class="row">
+           Quantity: <div class="col-md-8"><input type="number" name="quantity"></div>
+        </div>
+        <div class="row">
+            Quality Rating: <div class="col-md-8"><input type="number" name="quality_rating"></div>
+        </div>
+        <div class="row">
+           Status: <div class="col-md-8"><input type="text" name="status"></div>
+        </div>
+        <div class="row">
+           Date of Issue: <div class="col-md-8"><input type="date" name="issue_date"></div>
+        </div>
+        <div class="row">
+           Acknowlwdgment Date: <div class="col-md-8"><input type="date" name="acknowledgment_date"></div>
+            <button type="submit" class="btn btn-primary" style="width: 20rem;">Create</button>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
