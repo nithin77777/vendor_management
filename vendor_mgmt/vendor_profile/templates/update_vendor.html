@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static '/bootstrap-5.3.3-dist/css/bootstrap.min.css' %}">
+    <script src="{% static '/bootstrap-5.3.3-dist/js/bootstrap.min.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Update</title>
+</head>
+<body>
+    
+
+    <form action='' method="post">
+        {% csrf_token %}
+        Name: <input type="text" name="name" value="{{updated_data.name}}">
+        Contact: <input type="text" name="contact_details" value="{{updated_data.contact_details}}">
+        Address: <input type="text" name="address" value="{{updated_data.address}}">
+        <!-- Vendor Code: <input type="text" name="vendor_code" value="{{data.vendor_code}}"> -->
+        <button type="submit" class="btn btn-danger">Update</button>
+    </form>
+        
+    
+</body>
+</html>
