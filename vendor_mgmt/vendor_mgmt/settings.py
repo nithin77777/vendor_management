@@ -21,9 +21,12 @@ load_dotenv(dotenv_path=Path('/home/nithinsaikrishna/Desktop/Projects/vendor_man
 BASE_DIR = Path(__file__).resolve().parent.parent
 HELP_DIR = os.path.join(BASE_DIR,'purchase_order')
 HELP_DIR1=os.path.join(BASE_DIR,'vendor_profile')
+HELP_DIR2=os.path.join(BASE_DIR,'vendor_performance')
 TEMPLATES_DIR = os.path.join(HELP_DIR,'templates')
 TEMPLATES_DIR1=os.path.join(HELP_DIR1,'templates')
 STATIC_DIR1=os.path.join(HELP_DIR1,'static')
+TEMPLATES_DIR2=os.path.join(HELP_DIR2,'templates')
+STATIC_DIR2=os.path.join(HELP_DIR2,'static')
 STATIC_DIR = os.path.join(HELP_DIR,'static')
 BOOTSTRAP_DIR = os.path.join(BASE_DIR,'static')
 print(BOOTSTRAP_DIR)
@@ -45,6 +48,7 @@ print(ALLOWED_HOSTS)
 # Application definition
 
 INSTALLED_APPS = [
+    'vendor_performance',
     'vendor_profile',
     'purchase_order',
     'django.contrib.admin',
@@ -70,7 +74,7 @@ ROOT_URLCONF = 'vendor_mgmt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR,TEMPLATES_DIR1],
+        'DIRS': [TEMPLATES_DIR,TEMPLATES_DIR1,TEMPLATES_DIR2],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,7 +137,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[
-    STATIC_DIR,STATIC_DIR1,BOOTSTRAP_DIR
+    STATIC_DIR,
+    STATIC_DIR1,
+    BOOTSTRAP_DIR,
+    STATIC_DIR2,
 ]
 
 # Default primary key field type
