@@ -50,7 +50,7 @@ print(ALLOWED_HOSTS)
 INSTALLED_APPS = [
     'vendor_performance',
     'vendor_profile',
-    'purchase_order',
+    'purchase_order.apps.PurchaseOrderConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

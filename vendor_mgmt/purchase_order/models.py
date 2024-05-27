@@ -6,7 +6,7 @@ from vendor_profile.models import VendorProfile
 STATUS_CHOICES = [('pending','PENDING'),('completed','COMPLETED'),('canceled','CANCELED')]
 
 class PurchaseOrder(models.Model): 
-
+    
     po_number=models.CharField(verbose_name='Purchase Order Number',max_length=20,unique=True) 
     vendor=models.ForeignKey(VendorProfile,on_delete=models.CASCADE)
     order_date=models.DateTimeField()
